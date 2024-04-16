@@ -2,52 +2,29 @@
 
 import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
-import './Home.css'; // Import the CSS file for Home styles
+import './Home.css';
+import { Link } from 'react-router-dom';
 
 function Home() {
-  const [showCart, setShowCart] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
-  const [foods, setFoods] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  const addToCart = (itemName, itemId, itemPrice) => {
-    const newItem = { name: itemName, id: itemId, price: itemPrice };
-    setCartItems([...cartItems, newItem]);
-    console.log(`Added ${itemName} (ID: ${itemId}, Price: ${itemPrice}) to cart`);
-  };
-
-  const removeFromCart = (itemId) => {
-    const updatedCart = cartItems.filter((item) => item.id !== itemId);
-    setCartItems(updatedCart);
-  };
-
-  const closeCart = () => {
-    setShowCart(false);
-  };
-
-  const cartItemCount = cartItems.length;
-
-  useEffect(() => {
-    // Fetch data from the API
-    fetch('https://mdishidatabase.vercel.app/foods')
-      .then((response) => response.json())
-      .then((data) => {
-        setFoods(data);
-        setLoading(false);
-      })
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
 
   return (
     <div className="App">
       <NavBar />
       <header className="App-header">
         <div className="hero-container">
-          <img src="https://cdn.pixabay.com/photo/2017/05/07/08/56/pancakes-2291908_1280.jpg" alt="Hero Image" className="hero-image" />
+          <img src="/images/image1.png" alt="Hero Image" className="hero-image" />
           <div className="text-container">
-            <h1 className="hero-caption">Your Appetite, Our Pleasure</h1>
-            <p className="hero-paragraph">Explore a world of delicious cuisines at your fingertips.</p>
+            <h1 className="hero-caption">Find your dream job</h1>
+            <p className="hero-paragraph">Looking for jobs? Start exploring instantly today!</p>
+            <div className='hero-button'>
+            <button>Explore</button>
           </div>
+          </div>
+          <div className='links'>
+      <Link to="/" className="v-link">Explore</Link>
+      <Link to="/explore" className="v-link">Applied</Link>
+      <Link to="/saved" className="v-link">Saved</Link>
+      </div>
         </div>
       </header>
       <main>

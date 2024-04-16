@@ -9,8 +9,9 @@ const NavBar = () => {
       <div className="logo">JobApp</div>
       <div className='Navlinks'>
       <Link to="/" className="nav-link">Home</Link>
+      <Link to="/about" className="nav-link">Find Job</Link>
+      <Link to="/about" className="nav-link">Career Fair</Link>
       <Link to="/about" className="nav-link">About Us</Link>
-      <Link to="/contact" className="nav-link">Contact Us</Link>
       </div>
 
     </nav>

@@ -1,62 +1,87 @@
-// Home.js
+import React, { useState, useEffect } from "react";
+import "./Footer.css";
 
-import React, { useState, useEffect } from 'react';
-import NavBar from './NavBar';
-import './Home.css'; // Import the CSS file for Home styles
+const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [feedback, setFeedback] = useState("");
 
-function Home() {
-  const [showCart, setShowCart] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
-  const [foods, setFoods] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  const addToCart = (itemName, itemId, itemPrice) => {
-    const newItem = { name: itemName, id: itemId, price: itemPrice };
-    setCartItems([...cartItems, newItem]);
-    console.log(`Added ${itemName} (ID: ${itemId}, Price: ${itemPrice}) to cart`);
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
-  const removeFromCart = (itemId) => {
-    const updatedCart = cartItems.filter((item) => item.id !== itemId);
-    setCartItems(updatedCart);
+  const handleFeedbackChange = (e) => {
+    setFeedback(e.target.value);
   };
-
-  const closeCart = () => {
-    setShowCart(false);
-  };
-
-  const cartItemCount = cartItems.length;
 
   useEffect(() => {
-    // Fetch data from the API
-    fetch('https://mdishidatabase.vercel.app/foods')
-      .then((response) => response.json())
-      .then((data) => {
-        setFoods(data);
-        setLoading(false);
-      })
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
+    const submitFeedback = async () => {
+      if (email && feedback) {
+        try {
+          const response = await fetch(
+            "https://mdishidatabase.vercel.app/form",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ email, feedback }),
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error("Failed to submit feedback");
+          }
+
+          console.log("Feedback submitted successfully");
+          setEmail("");
+          setFeedback("");
+        } catch (error) {
+          console.error("Error submitting feedback:", error.message);
+        }
+      }
+    };
+
+    submitFeedback();
+  }, [email, feedback]);
 
   return (
-    <div className="App">
-      <NavBar />
-      <header className="App-header">
-        <div className="hero-container">
-          <img src="https://cdn.pixabay.com/photo/2017/05/07/08/56/pancakes-2291908_1280.jpg" alt="Hero Image" className="hero-image" />
-          <div className="text-container">
-            <h1 className="hero-caption">Your Appetite, Our Pleasure</h1>
-            <p className="hero-paragraph">Explore a world of delicious cuisines at your fingertips.</p>
-          </div>
-        </div>
-      </header>
-      <main>
+    <footer className="footer-container">
+      <div className="contact-form">
+        <h2>Feedback</h2>
+        <form>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={handleEmailChange}
+            required
+          />
+          <label htmlFor="feedback">Feedback:</label>
+          <textarea
+            id="feedback"
+            value={feedback}
+            onChange={handleFeedbackChange}
+            required
+          ></textarea>
+          {/* Removed onSubmit handler from form */}
+          <button type="submit">Submit</button>
+        </form>
+      </div>
 
-        {/*Backend Connection*/}
+      <div className="social-media">
+        <a href="https://www.facebook.com">
+          <i className="fa fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com">
+          <i className="fa fa-instagram"></i>{" "}
+        </a>
+        <a href="https://www.x.com">X</a>
+      </div>
 
-      </main>
-    </div>
+      <div className="address">38 Street, Apa Kanairo, Nairobi , Kenya</div>
+    </footer>
   );
-}
+};
 
-export default Home;
+export default Footer;

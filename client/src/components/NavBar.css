@@ -1,12 +1,11 @@
 .navbar {
-    background-color: #ffd700; /* Variant of yellow */
+    background-color: rgba(255, 215, 0, 0);
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
-    width: 100%;
+    width: 90%;
     top: 0;
     z-index: 1000;
   }
@@ -14,7 +13,7 @@
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: #333333;
   }
   
   .Navlinks {
@@ -27,10 +26,12 @@
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Added transition for background-color */
+    padding: 10px 45px; /* Added padding for better spacing */
   }
   
   .nav-link:hover {
-    color: #555; /* Hover color */
+    color: rgb(168, 161, 161);
+    border-radius: 5px;
   }
   

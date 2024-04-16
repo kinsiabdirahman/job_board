@@ -17,18 +17,29 @@
   }
   
   .hero-caption {
-    font-size: 3.1rem;
+    font-size: 3.0rem;
     margin-bottom: 20px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
   .hero-paragraph {
-    font-size: 1.2rem;
+    padding-left: 25px;
+    font-size: 0.8rem;
     max-width: 600px;
     font-weight: 600;
-    color: red;
+    color: black;
     margin: 0 auto;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .hero-button button{
+    background-color: blue;
+    color: white;
+    margin-top: 35px;
+    padding: 7px 12px;
+    border-radius: 5px;
+  }
+  .hero-button button:hover{
+    background-color: black;
   }
 
 .hero-container {
@@ -39,20 +50,35 @@
   
   .hero-image {
     width: 100%;
-    height: 620px;
+    height: 300px;
     display: block;
   }
   
   .text-container {
     position: absolute;
     top: 20%;
-    left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff; /* Adjust the text color as needed */
+    color: black; /* Adjust the text color as needed */
     animation: slideIn 1s ease-in-out; /* Animation for sliding in */
     animation-fill-mode: forwards;
     opacity: 0;
+    padding-left: 30px;
   }
   
-  
+  .links {
+    display: flex;
+    align-items: center;
+  }
+
+  .v-link {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #7c7979;
+    padding: 15px 10px;
+    font-size: smaller;
+  }
+
+  .v-link:hover {
+    color: black;
+    border-radius: 5px;
+  }
