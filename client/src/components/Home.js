@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import image1 from './images/image1.png';
 
 function Home() {
 
@@ -12,7 +13,7 @@ function Home() {
       <NavBar />
       <header className="App-header">
         <div className="hero-container">
-          <img src="/images/image1.png" alt="Hero Image" className="hero-image" />
+          <img src={image1} alt="Hero Image" className="hero-image" />
           <div className="text-container">
             <h1 className="hero-caption">Find your dream job</h1>
             <p className="hero-paragraph">Looking for jobs? Start exploring instantly today!</p>
