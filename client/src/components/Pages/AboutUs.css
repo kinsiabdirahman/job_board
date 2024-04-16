@@ -1,0 +1,141 @@
+/* pages/AboutUs.css */
+
+.page-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  /* Your CSS file or inline styles */
+
+.paragraph-container {
+    max-width: 900px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding for visual appeal */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Specify your desired font */
+    text-align: center; /* Align text justified for a neat look */
+  }
+  
+  .paragraph-text {
+    font-size: 16px; /* Set your desired font size */
+    line-height: 1.5; /* Adjust line-height for readability */
+    color: #333; /* Set your desired text color */
+  }
+  .paragraph-text span{
+    font-weight: 800;
+    text-transform: capitalize;
+    font-style: oblique;
+    font-family:cursive;
+    font-size: larger;
+  }
+  
+  
+  .about-section,
+  .employees-section,
+  .food-app-section,
+  .achievements-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center; /* Center the heading */
+  }
+/* Your CSS file or inline styles */
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .team-member {
+    width: 48%; /* Adjust the width based on your preference */
+    margin-bottom: 20px;
+  }
+  
+  .team-member img {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .team-member p {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .centered-team-member {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .centered-team-member img {
+    width: 60%; /* Adjust the width based on your preference */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto; /* Center the image */
+  }
+  
+
+  .header-container {
+    float: right;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .vision,
+  .mission,
+  .motto {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .employee {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .employee img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+  
+  .food-app-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .food-app-container {
+    flex: 1;
+  }
+  
+  .food-app-section img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .achievements-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .achievement {
+    width: 45%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .achievement img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  

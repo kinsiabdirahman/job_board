@@ -1,8 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import NavBar from "./NavBar";
+import Pages from "./Pages/Pages";
+import './App.css'
+import Footer from './Footer';
 
-function App() {
-  return <h1>Project Client</h1>;
+function App(){
+  return(
+  <div className="main">
+    <NavBar/>
+    <Pages />
+    <Footer />
+  </div>
+  )
 }
 
-export default App;
+export default App
