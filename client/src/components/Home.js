@@ -26,6 +26,12 @@ function Home() {
       <Link to="/explore" className="v-link">Applied</Link>
       <Link to="/saved" className="v-link">Saved</Link>
       </div>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search by job title or role"
+        />
+      </div>
         </div>
       </header>
       <main>

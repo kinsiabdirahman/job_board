@@ -1,85 +1,71 @@
-import React, { useState, useEffect } from "react";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [feedback, setFeedback] = useState("");
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleFeedbackChange = (e) => {
-    setFeedback(e.target.value);
-  };
-
-  useEffect(() => {
-    const submitFeedback = async () => {
-      if (email && feedback) {
-        try {
-          const response = await fetch(
-            "https://mdishidatabase.vercel.app/form",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ email, feedback }),
-            }
-          );
-
-          if (!response.ok) {
-            throw new Error("Failed to submit feedback");
-          }
-
-          console.log("Feedback submitted successfully");
-          setEmail("");
-          setFeedback("");
-        } catch (error) {
-          console.error("Error submitting feedback:", error.message);
-        }
-      }
-    };
-
-    submitFeedback();
-  }, [email, feedback]);
-
   return (
-    <footer className="footer-container">
-      <div className="contact-form">
-        <h2>Feedback</h2>
-        <form>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={handleEmailChange}
-            required
-          />
-          <label htmlFor="feedback">Feedback:</label>
-          <textarea
-            id="feedback"
-            value={feedback}
-            onChange={handleFeedbackChange}
-            required
-          ></textarea>
-          {/* Removed onSubmit handler from form */}
-          <button type="submit">Submit</button>
-        </form>
+    <footer>
+      <div className="content">
+        <div className="top">
+          <div className="logo-details">
+            <i className="fab fa-slack"></i>
+            <span className="logo_name">JobApp</span>
+          </div>
+          <div className="media-icons">
+        <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
+        <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
+        <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+        <a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+        <a href="#"><FontAwesomeIcon icon={faYoutube} /></a>
       </div>
-
-      <div className="social-media">
-        <a href="https://www.facebook.com">
-          <i className="fa fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com">
-          <i className="fa fa-instagram"></i>{" "}
-        </a>
-        <a href="https://www.x.com">X</a>
+        </div>
+        <div className="link-boxes">
+          <ul className="box">
+            <li className="link_name">Company</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Get started</a></li>
+          </ul>
+          <ul className="box">
+            <li className="link_name">Services</li>
+            <li><a href="#">Job Placement</a></li>
+            <li><a href="#">CV design</a></li>
+            <li><a href="#">Career Advice</a></li>
+            <li><a href="#">Top Companies</a></li>
+          </ul>
+          <ul className="box">
+            <li className="link_name">Account</li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">My account</a></li>
+            <li><a href="#">Preferences</a></li>
+            <li><a href="#">Purchase</a></li>
+          </ul>
+          <ul className="box">
+            <li className="link_name">Courses</li>
+            <li><a href="#">Information Technology</a></li>
+            <li><a href="#">Software Engineering</a></li>
+            <li><a href="#">Project Management</a></li>
+            <li><a href="#">Data Science</a></li>
+          </ul>
+          <ul className="box input-box">
+            <li className="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email" /></li>
+            <li><input type="button" value="Subscribe" /></li>
+          </ul>
+        </div>
       </div>
-
-      <div className="address">38 Street, Apa Kanairo, Nairobi , Kenya</div>
+      <div className="bottom-details">
+        <div className="bottom_text">
+          <span className="copyright_text">Copyright © 2024 <a href="#">JobApp</a> All rights reserved</span>
+          <span className="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & conditions</a>
+          </span>
+        </div>
+      </div>
     </footer>
   );
 };

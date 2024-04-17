@@ -26,7 +26,6 @@
     padding-left: 25px;
     font-size: 0.8rem;
     max-width: 600px;
-    font-weight: 600;
     color: black;
     margin: 0 auto;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -81,4 +80,18 @@
   .v-link:hover {
     color: black;
     border-radius: 5px;
+  }
+
+  .search-container {
+    
+    margin-bottom: 20px; 
+  }
+  
+  .search-container input {
+    padding: 10px;
+    width: 85%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
   }
