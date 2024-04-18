@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useAuth } from './AuthContext'; 
 import './SignupForm.css' // Include the CSS file
-import loginImage from '../assets/login.jpeg';
+import signupImage from '../assets/signup.jpeg';
 
 const SignupForm = () => {
   const { isAuthenticated, login } = useAuth();
@@ -54,12 +54,12 @@ const SignupForm = () => {
   return (
     <div className='setup'>
       <div className="register-container dark-mode">
-        <h3>Register</h3>
         <div className="image-container">
-          <img src={loginImage} alt="Login" className="login-image" />
+          <img src={signupImage} alt="signup" className="signup-image" />
         </div> 
         <form className="register-form form-container" onSubmit={(e) => handleRegister(e)}>
-        <h3>Register</h3>
+        <h4>Create an Account to get started</h4>
+        <h2>Getting Started</h2>
           <label htmlFor="username" className="label">Username</label>
           <input
             value={username}

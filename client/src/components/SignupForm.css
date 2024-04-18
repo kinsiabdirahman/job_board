@@ -19,11 +19,11 @@
     background-color: #f9f9f9; /* Background color for image container */
   }
   
-  .login-image {
+  .signup-image {
     max-width: 100%;
     height: auto;
     width: 100vh;
-    padding: 120px;
+    padding: 140px;
     /* border-radius: 8px; */
   }
   

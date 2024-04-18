@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useAuth } from './AuthContext'; 
 import './Login.css'
-// import loginImage from '../assets/login.jpeg';
+import loginImage from '../assets/login.jpeg';
 
 const LoginForm = () => {
   const { isAuthenticated, login } = useAuth();
@@ -51,12 +51,13 @@ const LoginForm = () => {
   return (
     <div className="setup">
       <div className="login-container">
-        <h3>Log In</h3>
-        {/* <div className="image-container">
+         <div className="image-container">
           <img src={loginImage} alt="Login" className="login-image" />
-        </div>  */}
+        </div>  
         <div className="form-container">
           <form className="register-form form-container" onSubmit={(e) => handleLogin(e)}>
+          <h2>Welcome Back!</h2>
+          <h4>Please enter your details!</h4>
             <label htmlFor="username" className="label">
               Username
               <input
