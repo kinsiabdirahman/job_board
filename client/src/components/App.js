@@ -1,8 +1,32 @@
-import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import LoginForm from "./LoginForm";
+import SignupForm from "./SignupForm";
 
 function App() {
-  return <h1>Project Client</h1>;
+  const [registered, setRegistered] = useState(false);
+
+  return (
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            {registered ? (
+              <Redirect to="/login" />
+            ) : (
+              <SignupForm setRegistered={setRegistered} />
+            )}
+          </Route>
+          <Route path="/login" component={LoginForm} />
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
