@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import image1 from './images/image1.png';
+import Jobdescription from "./JobDescription";
 
 
 function Home() {

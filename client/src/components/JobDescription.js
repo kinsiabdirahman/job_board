@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-import ApplicationForm from './ApplicationForm';
-import './JobDescription.css'
-import dummyJobs from "./dummyjobs";
+import ApplicationForm from "./ApplicationForm";
+import "./JobDescription.css";
 
-const Jobdescription = () => {
+const JobDescription = () => {
   const [jobs, setJobs] = useState([]);
   const [selectedJobId, setSelectedJobId] = useState(null);
 
   useEffect(() => {
-    setJobs(dummyJobs); 
-  }, []); 
+    // Fetch jobs data from an API or any other source
+    // For demonstration purposes, we initialize an empty array
+    setJobs([]);
+  }, []);
 
-  
   const applyForJob = (jobId) => {
-    setSelectedJobId(prevId => (prevId === jobId ? null : jobId)); 
+    setSelectedJobId((prevId) => (prevId === jobId ? null : jobId));
   };
 
   return (
@@ -22,9 +22,17 @@ const Jobdescription = () => {
       {jobs.map((job) => (
         <div key={job.id} className="job-listing">
           <h3 className="job-title">{job.title}</h3>
-          <p className="job-details"><strong>Minimum Qualifications:</strong> <br/>{job.minQualifications}</p>
-          <p className="job-details"><strong>Responsibilities:</strong> <br/>{job.responsibilities}</p>
-          <button className="apply-button" onClick={() => applyForJob(job.id)}>Apply</button>
+          <p className="job-details">
+            <strong>Minimum Qualifications:</strong> <br />
+            {job.minQualifications}
+          </p>
+          <p className="job-details">
+            <strong>Responsibilities:</strong> <br />
+            {job.responsibilities}
+          </p>
+          <button className="apply-button" onClick={() => applyForJob(job.id)}>
+            Apply
+          </button>
           {selectedJobId === job.id && <ApplicationForm jobId={job.id} />}
         </div>
       ))}
@@ -32,4 +40,4 @@ const Jobdescription = () => {
   );
 };
 
-export default Jobdescription;
+export default JobDescription;
