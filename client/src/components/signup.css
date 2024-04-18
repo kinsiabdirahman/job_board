@@ -1,89 +1,82 @@
 .setup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .register-container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9; /* Background color for image container */
-  }
-  
-  .signup-image {
-    max-width: 100%;
-    height: auto;
-<<<<<<< HEAD:client/src/components/signup.css
-    max-height: 100%;
-=======
-    width: 100vh;
-    padding: 140px;
-    /* border-radius: 8px; */
->>>>>>> saara:client/src/components/SignupForm.css
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.register-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; /* Background color for image container */
+}
+
+.signup-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #dce7e9; /* Background color for form container */
+  padding: 1rem;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: #58a6ff;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #4d8dd7;
+}
+
+.link {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .image-container,
   .form-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #dce7e9; /* Background color for form container */
-    padding: 1rem;
-  }
-  
-  .label {
-    margin-bottom: 0.5rem;
-  }
-  
-  .input {
-    padding: 0.5rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.25rem;
+    flex: none; /* Prevent side by side layout on small screens */
     width: 100%;
-    margin-bottom: 1rem;
   }
-  
-  .button {
-    padding: 0.5rem 1rem;
-    background-color: #58a6ff;
-    color: #fff;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #4d8dd7;
-  }
-  
-  .link {
-    color: #58a6ff;
-    text-decoration: none;
-  }
-  
-  .link:hover {
-    text-decoration: underline;
-  }
-  
-  .error-message {
-    color: red;
-  }
-  
-  @media (max-width: 768px) {
-    .image-container,
-    .form-container {
-      flex: none; /* Prevent side by side layout on small screens */
-      width: 100%;
-    }
-  }
-  
+}
