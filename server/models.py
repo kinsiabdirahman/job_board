@@ -27,8 +27,6 @@ class Application(db.Model, SerializerMixin):
     highest_qualification = db.Column(db.String)
     years_of_experience = db.Column(db.Integer)
     academic_history = db.Column(db.String)
-    years_of_experience = db.Column(db.Integer)
-    academic_history = db.Column(db.String)
     work_experience = db.Column(db.String)
 
     def __repr__(self):
@@ -40,15 +38,9 @@ class Job(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     job_title = db.Column(db.String)
     job_description = db.Column(db.String)
-    job_title = db.Column(db.String)
-    job_description = db.Column(db.String)
     job_responsibilities = db.Column(db.String)
     job_salary = db.Column(db.Integer)
-    applications = db.relationship('Application', backref='job', lazy=True)
+    location = db.Column(db.String)
+    
 
-    def __repr__(self):
-        return f'<Job {self.id}, {self.job_title}>'
 
-# Create tables
-# with app.app_context():
-#     db.create_all()
