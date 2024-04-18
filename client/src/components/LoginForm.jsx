@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import "./Login.css";
+import loginImage from "../assets/login.jpeg";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -39,12 +40,13 @@ const LoginForm = () => {
     <>
       <div className="setup">
         <div className="login-container">
-          <h3>Log In</h3>
+        <div className="image-container">
+          <img src={loginImage} alt="login" className="login-image" />
+        </div>
           <div className="form-container">
-            <form
-              className="register-form form-container"
-              onSubmit={(e) => handleSubmit(e)}
-            >
+            <form className="register-form form-container" onSubmit={(e) => handleSubmit(e)}>
+            <h2>Welcome Back!</h2>
+          <h4>please enter your details</h4>
               <label htmlFor="username" className="label">
                 Username
                 <input
