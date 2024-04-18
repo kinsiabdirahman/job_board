@@ -1,36 +1,51 @@
+#from flask import Flask
+#from flask_sqlalchemy import SQLAlchemy
+#from sqlalchemy_serializer import SerializerMixin
+
+#from app import db 
+
+#app = Flask(__name__)
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'  
+#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+#db = SQLAlchemy(app)
+
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_serializer import SerializerMixin
-from sqlalchemy.ext.associationproxy import association_proxy
-
-from config import db
-
-# Models go here!
-class User_table(db.Model):
-    __tablename__ = 'user_tables'
-
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String)
-    email = db.Coulmn(db.String)
 
 
-class Application(db.Model):
+db= SQLAlchemy()
+
+
+class User(db.Model, SerializerMixin):
+    __tablename__ = 'users'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    username = db.Column(db.String, unique=True)
+    email = db.Column(db.String, unique=True)  # Ensure email is unique
+    password = db.Column(db.String)  # Add password field
+
+
+class Application(db.Model, SerializerMixin):
     __tablename__ = 'applications'
 
     id = db.Column(db.Integer, primary_key=True)
-    first_name = db.column(db.String)
+    first_name = db.Column(db.String)
     last_name = db.Column(db.String)
     highest_qualification = db.Column(db.String)
-    years_of_experience = db.Coulmn(db.Integer)
-    acdemic_qulification = db.Column(db.String)
+    years_of_experience = db.Column(db.Integer)
+    academic_history = db.Column(db.String)
     work_experience = db.Column(db.String)
 
-class Jobs(db.Model):
-    __table__ = 'jobs'
+class Job(db.Model, SerializerMixin):
+    __tablename__ = 'jobs'
 
     id = db.Column(db.Integer, primary_key=True)
-    job_tittle = db.Column(db.String)
-    job_description = db.Coulmn(db.String)
+    job_title = db.Column(db.String)
+    job_description = db.Column(db.String)
     job_responsibilities = db.Column(db.String)
     job_salary = db.Column(db.Integer)
-    
 
-
+# Create tables
+#with app.app_context():
+#    db.create_all()
