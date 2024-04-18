@@ -16,6 +16,7 @@ class User(db.Model, SerializerMixin):
         return f'<User {self.id}, {self.username}, {self.email}>'
 
 class Application(db.Model, SerializerMixin):
+class Application(db.Model, SerializerMixin):
     __tablename__ = 'applications'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -24,6 +25,8 @@ class Application(db.Model, SerializerMixin):
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
     highest_qualification = db.Column(db.String)
+    years_of_experience = db.Column(db.Integer)
+    academic_history = db.Column(db.String)
     years_of_experience = db.Column(db.Integer)
     academic_history = db.Column(db.String)
     work_experience = db.Column(db.String)
@@ -35,6 +38,8 @@ class Job(db.Model, SerializerMixin):
     __tablename__ = 'jobs'
 
     id = db.Column(db.Integer, primary_key=True)
+    job_title = db.Column(db.String)
+    job_description = db.Column(db.String)
     job_title = db.Column(db.String)
     job_description = db.Column(db.String)
     job_responsibilities = db.Column(db.String)
