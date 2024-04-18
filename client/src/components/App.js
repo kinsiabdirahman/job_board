@@ -4,9 +4,10 @@ import {
   Route,
   Switch,
   Redirect,
-} from "react-router-dom";
+} from "react-router-dom"; // Import Redirect
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
+import Home from "./Home";
 
 function App() {
   const [registered, setRegistered] = useState(false);
@@ -17,12 +18,13 @@ function App() {
         <Switch>
           <Route exact path="/">
             {registered ? (
-              <Redirect to="/login" />
+              <Redirect to="/home" />
             ) : (
               <SignupForm setRegistered={setRegistered} />
             )}
           </Route>
           <Route path="/login" component={LoginForm} />
+          <Route path="/home" component={Home} />
         </Switch>
       </div>
     </Router>

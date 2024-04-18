@@ -25,7 +25,7 @@ const LoginForm = () => {
         const data = await response.json();
         localStorage.setItem("access_token", data.access_token);
         window.alert("Login successful");
-        history.push("/");
+        history.push("./Home"); // Redirect to pages.js upon successful login
       } else {
         window.alert("Login failed. Invalid credentials");
       }
