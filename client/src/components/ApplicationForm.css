@@ -1,0 +1,51 @@
+/* jobdescription.css */
+
+/* Style for available jobs section */
+.job-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for each job listing */
+  .job-listing {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for job title */
+  .job-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for job details */
+  .job-details {
+    margin-bottom: 15px;
+  }
+  
+  /* Style for minimum qualifications */
+  .min-qualifications {
+    font-weight: bold;
+  }
+  
+  /* Style for responsibilities */
+  .responsibilities {
+    font-weight: bold;
+  }
+  
+  /* Style for apply button */
+  .apply-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .apply-button:hover {
+    background-color: #0056b3;
+  }
