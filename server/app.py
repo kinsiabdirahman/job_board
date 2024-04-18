@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_migrate import Migrate
 from flask_restful import Resource, Api
-from models import db, User, Job
+from models import db, User, Job, Application
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager, create_access_token
@@ -65,15 +65,64 @@ class UserLogin(Resource):
 class Jobs(Resource):
     def get(self):
         jobs = Job.query.all()
-        serialized_jobs = [{'job_title': job.job_title, 'job_salary': job.job_salary, 'location': job.location} for job in jobs]
+        serialized_jobs = [{'id': job.id, 'job_title': job.job_title, 'job_description': job.job_description, 'job_responsibilities': job.job_responsibilities, 'job_salary': job.job_salary, 'location': job.location} for job in jobs]
         return jsonify(serialized_jobs)
 
 
+class JobDetails(Resource):
+    def get(self, id):
+        job = Job.query.get(id)
+        if not job:
+            return {'message': 'Job not found'}, 404
+        serialized_job = {
+            'job_title': job.job_title,
+            'job_description': job.job_description,
+            'job_responsibilities': job.job_responsibilities,
+            'job_salary': job.job_salary,
+            'location': job.location
+        }
+        return jsonify(serialized_job)
+    
+class ApplicationResource(Resource):
+    def post(self):
+        try:
+            data = request.json
+            job_id = data.get('job_id')
+            user_id = data.get('user_id')
+            first_name = data.get('first_name')
+            last_name = data.get('last_name')
+            highest_qualification = data.get('highest_qualification')
+            years_of_experience = data.get('years_of_experience')
+            academic_history = data.get('academic_history')
+            work_experience = data.get('work_experience')
 
+            # Create a new application instance
+            new_application = Application(
+                user_id=user_id,
+                job_id=job_id,
+                first_name=first_name,
+                last_name=last_name,
+                highest_qualification=highest_qualification,
+                years_of_experience=years_of_experience,
+                academic_history=academic_history,
+                work_experience=work_experience
+            )
 
+            # Add the application to the database
+            db.session.add(new_application)
+            db.session.commit()
+
+            return {'message': 'Application submitted successfully!'}, 201
+        except Exception as e:
+            return {'message': 'Failed to submit application. Error: {}'.format(str(e))}, 500
+
+api.add_resource(JobDetails, '/job/<int:id>')
+api.add_resource(ApplicationResource, '/applications')
 api.add_resource(UserRegistration, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(Jobs, '/jobs')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5555)
