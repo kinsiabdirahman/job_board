@@ -1,12 +1,12 @@
 /* pages/AboutUs.css */
 
 .page-container {
+
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin-top: 60px;
   }
-  /* Your CSS file or inline styles */
 
 .paragraph-container {
     max-width: 900px; /* Set a maximum width for the container */

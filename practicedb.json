@@ -1,0 +1,251 @@
+{
+    "foods": [
+      {
+        "id": 1,
+        "name": "Pizza Inn",
+        "cuisine": "Pizza",
+        "rating": 4.5,
+        "website": "https://pizzainn.co.ke/pizza-inn-menu/",
+        "menu": [
+          {
+            "id": 101,
+            "name": "Margherita Pizza",
+            "price": 12.99,
+            "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/07/margherita-pizza-recipe.jpg"
+          },
+          {
+            "id": 102,
+            "name": "Pepperoni Pizza",
+            "price": 14.99,
+            "imageUrl": "https://images.unsplash.com/photo-1590133728822-cc311f9c280f?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          },
+          {
+            "id": 103,
+            "name": "Vegetarian Supreme",
+            "price": 15.99,
+            "imageUrl": " https://media.istockphoto.com/id/1514253533/photo/td-veggie-pizza.jpg?s=1024x1024&w=is&k=20&c=-_SeecUuedaZa7rYpfzn5yqS5AHP72SjfGmGIJfUw6Y= "
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Chicken Inn",
+        "cuisine": "Fast Food",
+        "rating": 4.0,
+        "website": "https://chickeninn.co.ke/chicken-inn-menu/",
+        "menu": [
+          {
+            "id": 201,
+            "name": "Chicken Burger",
+            "price": 8.99,
+            "imageUrl": " https://media.istockphoto.com/id/521207406/photo/southern-country-fried-chicken-sandwich.jpg?s=1024x1024&w=is&k=20&c=-4EO_SnfdAwoLfPeQjQApOPyBBeSXRmmbPpOUgnuTVE=  "
+          },
+          {
+            "id": 202,
+            "name": "Spicy Wings",
+            "price": 10.99,
+            "imageUrl": "https://media.istockphoto.com/id/1098318620/photo/the-concept-of-indian-cuisine-baked-chicken-wings-and-legs-in-honey-mustard-sauce-serving.jpg?s=612x612&w=0&k=20&c=--W_gsVHQ2MxyFkqi7B1WjcsPgnuP2ROYSvPHEIFmnw= "
+          },
+          {
+            "id": 203,
+            "name": "Grilled Chicken Sandwich",
+            "price": 9.99,
+            "imageUrl": "https://media.istockphoto.com/id/580114116/photo/grilled-chicken-fillets-in-a-spicy-marinade.jpg?s=612x612&w=0&k=20&c=ZpRLP1xUUtAoiXPSGxPh9HUJ9L5JVh9wIfd-cRYTj1k="
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Art Caffe",
+        "cuisine": "Cafe",
+        "rating": 4.2,
+        "website": "https://www.artcaffe.co.ke/images/pdf/QR%20MENU-MM+A-SEPTEMBER%202022%20UPDATED.pdf",
+        "menu": [
+          {
+            "id": 301,
+            "name": "Cappuccino",
+            "price": 4.99,
+            "imageUrl": "https://media.istockphoto.com/id/523168994/photo/cappuccino-with-coffee-beans.jpg?s=612x612&w=0&k=20&c=qhRFxaeTppFykANecfXx8B17JSJYNJgW2KExDrUWKCk="
+          },
+          {
+            "id": 302,
+            "name": "Croissant",
+            "price": 3.99,
+            "imageUrl": "https://media.istockphoto.com/id/629455902/photo/french-boulangerie-fresh-croissant-for-sale.jpg?s=612x612&w=0&k=20&c=ImE0C1nh-Nq_FROYD3IcbeC1GrvA2RUH1zzbKPOY2Lg="
+          },
+          {
+            "id": 303,
+            "name": "Blueberry Muffin",
+            "price": 2.99,
+            "imageUrl": "https://media.istockphoto.com/id/1330690873/photo/homemade-vegan-blueberry-muffins.jpg?s=612x612&w=0&k=20&c=ST0N6ofQLAtRc95y3_oZES_UxMxmK9Em3m1dUZfbiSs="
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "CJS Hotel",
+        "cuisine": "International",
+        "rating": 4.8,
+        "website": "https://cjs.co.ke/user/menu",
+        "menu": [
+          {
+            "id": 401,
+            "name": "Grilled Salmon",
+            "price": 22.99,
+            "imageUrl": "https://media.istockphoto.com/id/175028181/photo/fillet-of-salmon-with-vegetable.jpg?s=612x612&w=0&k=20&c=3vkSdz2GXzxdHF6zavhQqi4wN6mhOZTXOvGcvtrfYqk="
+          },
+          {
+            "id": 402,
+            "name": "Chicken Alfredo Pasta",
+            "price": 18.99,
+            "imageUrl": "https://media.istockphoto.com/id/506916161/photo/homemade-fettucini-aflredo-pasta.jpg?s=612x612&w=0&k=20&c=Pa3dwlsqnPfOKgldMXuHVy5Aqmtbp8wThbj6V_4u5us="
+          },
+          {
+            "id": 403,
+            "name": "Beef Tenderloin Steak",
+            "price": 25.99,
+            "imageUrl": "https://media.istockphoto.com/id/535786572/photo/grilled-striploin-steak.jpg?s=612x612&w=0&k=20&c=F_vrvwIOWe3vBR2y16Dp4z6d46K1sIY3togU3VYjrpA="
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Lunchbox",
+        "cuisine": "Sandwiches",
+        "rating": 4.4,
+        "menu": [
+          {
+            "id": 501,
+            "name": "Classic Club Sandwich",
+            "price": 9.99,
+            "imageUrl": "https://media.istockphoto.com/id/534408608/photo/bacon-lettuce-tomato-blt-sandwich.jpg?s=612x612&w=0&k=20&c=semfgzMjhspjCPS3Ld2wgkAfnlQmVe0Ci6V_Kwfhjkk="
+          },
+          {
+            "id": 502,
+            "name": "Caprese Panini",
+            "price": 8.99,
+            "imageUrl": "https://media.istockphoto.com/id/484476780/photo/close-up-sandwich-platter.jpg?s=612x612&w=0&k=20&c=RT53lI-yT_u-wt3YuMdP7Bx0D-IHRRK8HQX5-n68964="
+          },
+          {
+            "id": 503,
+            "name": "BBQ Chicken Wrap",
+            "price": 10.99,
+            "imageUrl": "https://media.istockphoto.com/id/1352473088/photo/fresh-chicken-tikka-roll-with-fresh-tomatos-salad-cheese-and-onions-isolated-on-bright-blue.jpg?s=612x612&w=0&k=20&c=yxtl0e9WW14JI_cX0Z6Q10osj3Ca5bTqteZewk6bQ48="
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Thai Chi by Sarova",
+        "cuisine": "Thai",
+        "rating": 4.6,
+        "menu": [
+          {
+            "id": 601,
+            "name": "Tom Yum Soup",
+            "price": 11.99,
+            "imageUrl": "https://media.istockphoto.com/id/1392660302/photo/tom-yam-kung-prawn-and-lemon-soup-with-mushrooms-thai-food-in-wooden-bowl-top-view.jpg?s=612x612&w=0&k=20&c=BZUh3_h2QLS3HTyBl5hDNoQwg_1xXLt5L0rYsug3yJs="
+          },
+          {
+            "id": 602,
+            "name": "Green Curry Chicken",
+            "price": 14.99,
+            "imageUrl": "https://media.istockphoto.com/id/1140580445/photo/thai-green-curry.jpg?s=612x612&w=0&k=20&c=55r_mPreDyGcNLQPXzK9PAC2m8DXU1uN_9t4Zw_q8dU="
+          },
+          {
+            "id": 603,
+            "name": "Pad Thai Noodles",
+            "price": 12.99,
+            "imageUrl": "https://media.istockphoto.com/id/181470605/photo/thai-noodle-food.jpg?s=612x612&w=0&k=20&c=15k_vl4gfK04vqK6OY3jLpN57NLYxEwnLedF7DJOiiQ="
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Alloy",
+        "cuisine": "Modern American",
+        "rating": 4.7,
+        "menu": [
+          {
+            "id": 701,
+            "name": "Truffle Mac & Cheese",
+            "price": 15.99,
+            "imageUrl": "https://media.istockphoto.com/id/515684707/photo/pasta-norcina.jpg?s=612x612&w=0&k=20&c=EtHDaDR13WS2vb5GGq8pzcuJaCWKh_qKp7ChAmjy7X4="
+          },
+          {
+            "id": 702,
+            "name": "Short Rib Tacos",
+            "price": 13.99,
+            "imageUrl": "https://media.istockphoto.com/id/1323688568/photo/crispy-fried-birria-tacos.jpg?s=612x612&w=0&k=20&c=RX-a49iSEtfbLv4CcsJW18PpfGn3ezACkDrs_iac-bE="
+          },
+          {
+            "id": 703,
+            "name": "Seared Ahi Tuna",
+            "price": 18.99,
+            "imageUrl": "https://media.istockphoto.com/id/925500908/photo/seared-raw-ahi-tuna-rare-steaks-with-black-pepper-crust-on-display-in-market-restaurant-shop.jpg?s=612x612&w=0&k=20&c=ebp9Va3l5uMp_gswwe5bwtvM44jYPN9wFKoab0K_co0="
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "The Curve",
+        "cuisine": "Steakhouse",
+        "rating": 4.9,
+        "menu": [
+          {
+            "id": 801,
+            "name": "Filet Mignon",
+            "price": 27.99,
+            "imageUrl": "https://media.istockphoto.com/id/953878856/photo/raw-chicken-breast-pepper-rosemary-on-a-cutting-board-on-a-wooden-background-top-view-raw.jpg?s=612x612&w=0&k=20&c=7lSfogDzfQGiULcI8SfuA-kgxbxSfFsYahX1x7PR-gQ="
+          },
+          {
+            "id": 802,
+            "name": "Ribeye Steak",
+            "price": 24.99,
+            "imageUrl": "https://media.istockphoto.com/id/587207508/photo/sliced-grilled-steak-ribeye-with-herb-butter.jpg?s=612x612&w=0&k=20&c=gm6Kg6rHYH0xWTF5oszm6NZ-hp9aPRbk9V1kvCr8MQI="
+          },
+          {
+            "id": 803,
+            "name": "Garlic Butter Shrimp",
+            "price": 19.99,
+            "imageUrl": "https://media.istockphoto.com/id/469311080/photo/jumbo-shrimp-scampi-sauteeing-in-butter-and-olive-oil.jpg?s=612x612&w=0&k=20&c=zKkCXnYEIzgx4DRKWtHbFiRZksHpN4ijtWM5_EqdI2s="
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Gallitos",
+        "cuisine": "Mexican",
+        "rating": 4.3,
+        "menu": [
+          {
+            "id": 901,
+            "name": "Chicken Quesadilla",
+            "price": 10.99,
+            "imageUrl": "https://media.istockphoto.com/id/1159174146/photo/quesadilla-with-chicken-and-sauces.jpg?s=612x612&w=0&k=20&c=c_w0YgNkZO2X2MPIjAS2OYWoBkm7tPLOQOhHABfR8Ao="
+          },
+          {
+            "id": 902,
+            "name": "Beef Burrito",
+            "price": 12.99,
+            "imageUrl": "https://media.istockphoto.com/id/1300815223/photo/beef-burritos-with-beans-and-cheese.jpg?s=612x612&w=0&k=20&c=zRKJQlfhj094-czZ4guY2NUb-Ws5Mu3gAMJNTtoYP8c="
+          },
+          {
+            "id": 903,
+            "name": "Fish Tacos",
+            "price": 11.99,
+            "imageUrl": "https://media.istockphoto.com/id/1200136076/photo/shrimp-street-tacos.jpg?s=612x612&w=0&k=20&c=QSliAiLbFEmF7WPN69yEc-weAInG6A4GquGxaGEgBzE="
+          }
+        ]
+      }
+    ],
+  
+    "form": [
+      {
+        "id": 1,
+        "title": "jim",
+        "lato": "foody"
+      }
+    ]
+  }
+  
