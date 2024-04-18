@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import NavBar from './NavBar';
-import './Home.css';
-import { Link } from 'react-router-dom';
-import image1 from './images/image1.png';
-import Jobdescription from "./JobDescription";
-
+import React, { useState, useEffect } from "react";
+import NavBar from "./NavBar";
+import "./Home.css";
+import { Link, useHistory } from "react-router-dom";
+import image1 from "./images/image1.png";
 
 function Home() {
   const [jobs, setJobs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const history = useHistory();
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -18,7 +17,16 @@ function Home() {
           throw new Error("Failed to fetch jobs");
         }
         const data = await response.json();
-        setJobs(data);
+        const jobsWithDetails = data.map((job) => {
+          return {
+            ...job,
+            job_description: job.job_description || "",
+            job_responsibilities: job.job_responsibilities || "",
+            minQualifications: job.minQualifications || "",
+            responsibilities: job.responsibilities || "",
+          };
+        });
+        setJobs(jobsWithDetails);
       } catch (error) {
         console.error("Error fetching jobs:", error);
       }
@@ -31,6 +39,24 @@ function Home() {
     return job.job_title.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
+
+  const applyForJob = (job) => {
+    const jobDetails = {
+      id: job.id,
+      job_title: job.job_title,
+      location: job.location,
+      job_salary: job.job_salary,
+      job_description: job.job_description,
+      job_responsibilities: job.job_responsibilities,
+      minQualifications: job.minQualifications,
+      responsibilities: job.responsibilities,
+    };
+
+    history.push({
+      pathname: `/job/${job.id}`,
+      state: { job: jobDetails },
+    });
+  };
   return (
     <div className="App">
       <NavBar />
@@ -77,13 +103,14 @@ function Home() {
               <h3>{job.job_title}</h3>
               <p>Location: {job.location}</p>
               <p>Salary: {job.job_salary}</p>
-              <button>Apply Now</button>
+
+              <button onClick={() => applyForJob(job)}>Apply Now</button>
             </div>
           ))}
           {filteredJobs.length === 0 && <p>No jobs found.</p>}
         </div>
       </div>
-      <Jobdescription/>
+
     </div>
   );
 }

@@ -1,41 +1,40 @@
 import React, { useState, useEffect } from "react";
-import ApplicationForm from "./ApplicationForm";
 import "./JobDescription.css";
+import { useLocation, Link } from "react-router-dom";
 
 const JobDescription = () => {
-  const [jobs, setJobs] = useState([]);
-  const [selectedJobId, setSelectedJobId] = useState(null);
+  const [job, setJob] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
-    // Fetch jobs data from an API or any other source
-    // For demonstration purposes, we initialize an empty array
-    setJobs([]);
-  }, []);
+    if (location.state && location.state.job) {
+      setJob(location.state.job);
+    }
+  }, [location.state]);
 
-  const applyForJob = (jobId) => {
-    setSelectedJobId((prevId) => (prevId === jobId ? null : jobId));
-  };
+  if (!job) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div>
-      <h2 className="job-title">Available Jobs</h2>
-      {jobs.map((job) => (
-        <div key={job.id} className="job-listing">
-          <h3 className="job-title">{job.title}</h3>
-          <p className="job-details">
-            <strong>Minimum Qualifications:</strong> <br />
-            {job.minQualifications}
-          </p>
-          <p className="job-details">
-            <strong>Responsibilities:</strong> <br />
-            {job.responsibilities}
-          </p>
-          <button className="apply-button" onClick={() => applyForJob(job.id)}>
-            Apply
-          </button>
-          {selectedJobId === job.id && <ApplicationForm jobId={job.id} />}
-        </div>
-      ))}
+      <div className="job-details-container">
+        <h2 className="job-title">{job.job_title}</h2>
+        <p className="job-details">Location: {job.location}</p>
+        <p className="job-details">Salary: {job.job_salary}</p>
+        <p className="job-details">Salary: {job.job_responsibilities}</p>
+        <p className="job-details">
+          <strong>Job Description:</strong> <br />
+          {job.job_description}
+        </p>
+        <p className="job-details">
+          <strong>Responsibilities:</strong> <br />
+          {job.job_responsibilities}
+        </p>
+        <Link to={`/apply/${job.id}`} className="apply-button">
+          Apply Now
+        </Link>
+      </div>
     </div>
   );
 };
