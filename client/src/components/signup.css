@@ -7,8 +7,8 @@
   
   .register-container {
     display: flex;
-    width: 100;
-    height: 100;
+    width: 100%;
+    height: 100%;
   }
   
   .image-container {
@@ -19,12 +19,10 @@
     background-color: #f9f9f9; /* Background color for image container */
   }
   
-  .login-image {
+  .signup-image {
     max-width: 100%;
     height: auto;
-    width: 100vh;
-    padding: 120px;
-    /* border-radius: 8px; */
+    max-height: 100%;
   }
   
   .form-container {
@@ -37,11 +35,6 @@
     padding: 1rem;
   }
   
-  /* .dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
-   */
   .label {
     margin-bottom: 0.5rem;
   }
@@ -52,18 +45,6 @@
     border-radius: 0.25rem;
     width: 100%;
     margin-bottom: 1rem;
-  }
-  
-  .password-input {
-    position: relative;
-  }
-  
-  .eye-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
   }
   
   .button {
@@ -77,6 +58,19 @@
   
   .button:hover {
     background-color: #4d8dd7;
+  }
+  
+  .link {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .error-message {
+    color: red;
   }
   
   @media (max-width: 768px) {

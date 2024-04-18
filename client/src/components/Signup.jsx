@@ -52,8 +52,8 @@ const SignupForm = () => {
           <img src={signupImage} alt="signup" className="signup-image" />
         </div> 
         <form className="form-container" onSubmit={(e) => handleRegister(e)}>
-        <h4>Create an account to sign up</h4>
-          <h2>Getting Started</h2>
+          <h2>Welcome Back!</h2>
+          <h4>please enter your details!</h4>
           <label htmlFor="username" className="label">Username</label>
           <input
             value={username}
