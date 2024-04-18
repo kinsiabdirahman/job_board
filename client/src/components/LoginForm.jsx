@@ -70,13 +70,13 @@ const LoginForm = () => {
               <button type="submit" className="button">
                 Log in
               </button>
-            </form>
-            <p>
+              <p>
               Don't have an account?{" "}
               <NavLink to="/register" className="link">
                 <strong>Sign Up here</strong>
               </NavLink>
             </p>
+            </form>  
           </div>
         </div>
       </div>

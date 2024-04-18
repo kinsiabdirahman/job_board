@@ -50,6 +50,7 @@ const SignupForm = () => {
       <div className="register-container">
         <div className="image-container">
           <img src={signupImage} alt="signup" className="signup-image" />
+          <img src={signupImage} alt="signup" className="signup-image" />
         </div> 
         <form className="form-container" onSubmit={(e) => handleRegister(e)}>
           <h2>Welcome Back!</h2>
