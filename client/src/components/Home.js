@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 import "./Home.css";
 import { Link, useHistory } from "react-router-dom";
 import image1 from "./images/image1.png";

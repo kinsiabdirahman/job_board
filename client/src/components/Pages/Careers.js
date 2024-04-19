@@ -1,9 +1,12 @@
 import React from "react";
+import NavBar from "../NavBar";
+import Footer from "../Footer";
 import "./Careers.css";
 
 const Careers = () => {
   return (
     <div className="careers-container">
+      <NavBar />
       <h1>Join Our Team</h1>
       <p>
         We're always looking for talented individuals to join our team and contribute to our mission. If you're passionate about making our website better, we'd love to hear from you.
@@ -33,6 +36,7 @@ const Careers = () => {
       <p className="contact-info">
         For inquiries and applications, please contact us at <a href="mailto:careers@example.com">careers@example.com</a>.
       </p>
+      <Footer />
     </div>
   );
 };
