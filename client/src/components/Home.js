@@ -39,7 +39,6 @@ function Home() {
     return job.job_title.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
-
   const applyForJob = (job) => {
     const jobDetails = {
       id: job.id,
@@ -110,7 +109,6 @@ function Home() {
           {filteredJobs.length === 0 && <p>No jobs found.</p>}
         </div>
       </div>
-
     </div>
   );
 }
