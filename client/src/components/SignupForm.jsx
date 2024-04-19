@@ -1,97 +1,85 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import './signup.css'; // Include the CSS file
-import signupImage from '../assets/signup.jpeg';
+import React, { useState } from "react";
+import { NavLink, useHistory } from "react-router-dom";
+import "./signup.css";
+import loginImage from "../assets/login.jpeg";
 
 const SignupForm = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
-  const [redirecting, setRedirecting] = useState(false);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const history = useHistory();
 
-  const handleRegister = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await fetch('/', {
-        method: 'POST',
+      const response = await fetch("http://localhost:5555/register", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, email, password }),
-        credentials: 'include',
+        body: JSON.stringify({
+          username,
+          email,
+          password,
+        }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        setMessage(data.message);
-        setRedirecting(true);
+      if (response.status === 201) {
+        window.alert("User registered successfully!");
+        history.push("/login");
       } else {
-        const data = await response.json();
-        setMessage(data.message);
+        window.alert("Registration failed. Please try again.");
       }
     } catch (error) {
-      console.error('Error during registration:', error);
-      setMessage('An error occurred during registration.');
+      console.error("Error:", error);
+      window.alert("An error occurred while processing your request");
     }
   };
 
-  useEffect(() => {
-    if (redirecting) {
-      setRedirecting(false);
-      history.push('/');
-    }
-  }, [redirecting, history]);
-
   return (
-    <div className='setup'>
+    <>
+      <h2>Sign Up</h2>
       <div className="register-container">
         <div className="image-container">
-          <img src={signupImage} alt="signup" className="signup-image" />
-        </div> 
-        <form className="form-container" onSubmit={(e) => handleRegister(e)}>
-        <h4>Create an account to sign up</h4>
-          <h2>Getting Started</h2>
-          <label htmlFor="username" className="label">Username</label>
-          <input
-            value={username}
-            onChange={(e) => setUsername(e.target.value)} 
-            type="text"
-            placeholder="Enter Username"
-            id="username"
-            name="username"
-            className="input"
-          />
-          <label htmlFor="email" className="label">Email</label>
-          <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)} 
-            type="email"
-            placeholder="Enter Email"
-            id="email"
-            name="email"
-            className="input"
-          />
-          <label htmlFor="password" className="label">Password</label> 
-          <input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-            placeholder="Enter Password"
-            id="password"
-            name="password"
-            className="input"
-          />
-          <button type="submit" className="button">Sign Up</button>
+          <img src={loginImage} alt="Login" className="login-image" />
+        </div>
+        <div className="form-container">
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>Username:</label>
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label>Email:</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label>Password:</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
           <p>
-          Already have an account? <Link to="/login" className='link'><strong>Log in here</strong></Link>
-        </p>
-        {message && <p className="error-message">{message}</p>}
-        </form>
+            Already have an account? <NavLink to="/login">Login</NavLink>
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
