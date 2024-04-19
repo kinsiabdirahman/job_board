@@ -1,9 +1,12 @@
 import React from "react";
+import NavBar from "../NavBar";
+import Footer from "../Footer";
 import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
     <div className="page-container">
+      <NavBar />
       <section className="about-section">
         <h2>About Us</h2>
         <div className="paragraph-container">
@@ -38,6 +41,7 @@ const AboutUs = () => {
         <div className="marker">
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

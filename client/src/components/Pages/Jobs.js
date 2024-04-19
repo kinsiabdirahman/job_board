@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import NavBar from "../NavBar";
+import Footer from "../Footer"
 import './Jobs.css';
 
 const Jobs = () => {
@@ -43,6 +45,7 @@ const Jobs = () => {
 
   return (
     <div className="jobs-section">
+      <NavBar />
       <div className="explore-container">
         <h1>Explore Jobs</h1>
         {/* Search bar */}
@@ -77,6 +80,7 @@ const Jobs = () => {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
