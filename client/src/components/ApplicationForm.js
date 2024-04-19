@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ApplicationForm.css';
 
+
 const ApplicationForm = ({ jobId }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
