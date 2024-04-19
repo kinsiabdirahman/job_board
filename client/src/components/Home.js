@@ -5,6 +5,7 @@ import "./Home.css";
 import { Link, useHistory } from "react-router-dom";
 import image1 from "./images/image1.png";
 
+
 function Home() {
   const [jobs, setJobs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
