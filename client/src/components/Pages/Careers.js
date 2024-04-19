@@ -6,7 +6,7 @@ const Careers = () => {
     <div className="careers-container">
       <h1>Join Our Team</h1>
       <p>
-        We're always looking for talented individuals to join our team and contribute to our mission. If you're passionate about [describe your industry or mission], we'd love to hear from you.
+        We're always looking for talented individuals to join our team and contribute to our mission. If you're passionate about making our website better, we'd love to hear from you.
       </p>
       
       <h2>Current Openings</h2>
