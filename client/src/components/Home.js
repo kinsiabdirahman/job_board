@@ -41,7 +41,6 @@ function Home() {
     return job.job_title.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
-
   const applyForJob = (job) => {
     const jobDetails = {
       id: job.id,
