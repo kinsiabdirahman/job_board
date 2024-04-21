@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
-import "./LoginForm.css";
 import loginImage from "../assets/login.jpeg";
-
-import './Login.css'
+import "./Login.css";
+import "./LoginForm.css";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -87,50 +86,10 @@ const LoginForm = () => {
                 <strong>Sign Up here</strong>
               </NavLink>
             </p>
-          </div>
-    <div className="setup">
-      <div className="login-container">
-         <div className="image-container">
-          <img src={loginImage} alt="Login" className="login-image" />
-        </div>  
-        <div className="form-container">
-          <form className="register-form form-container" onSubmit={(e) => handleLogin(e)}>
-          <h2>Welcome Back!</h2>
-          <h4>Please enter your details!</h4>
-            <label htmlFor="username" className="label">
-              Username
-              <input
-                value={username}
-                onChange={(e) => setUsername(e.target.value)} 
-                type="text"
-                placeholder="Enter Username"
-                id="username"
-                name="username"
-                className="input"
-              />
-            </label>
-            <label htmlFor="password" className="label"> 
-              Password
-              <input
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                type="password"
-                placeholder="Enter Password"
-                id="password"
-                name="password"
-                className="input"
-              />
-            </label>
-            <button type="submit" className="button">Log in</button>
           </form>
-          <p>
-            Don't have an account? <Link to="/signup" className='link'> <strong>Sign Up here</strong></Link>
-          </p>
-          {message && <p className="error-message">{message}</p>}
         </div>
       </div>
     </div>
-    </>
   );
 };
 
