@@ -46,15 +46,14 @@ const SignupForm = () => {
   }, [redirecting, history]);
 
   return (
-    <div className='setup'>
+    <div className="setup">
       <div className="register-container">
         <div className="image-container">
           <img src={signupImage} alt="signup" className="signup-image" />
-          <img src={signupImage} alt="signup" className="signup-image" />
         </div> 
         <form className="form-container" onSubmit={(e) => handleRegister(e)}>
-          <h2>Welcome Back!</h2>
-          <h4>please enter your details!</h4>
+          <h1>Welcome Back!</h1>
+          <h2>please enter your details!</h2>
           <label htmlFor="username" className="label">Username</label>
           <input
             value={username}

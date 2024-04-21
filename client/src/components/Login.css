@@ -70,15 +70,14 @@
 }
 
 .form-container input {
+  /* padding: 0.5rem !important; */
   border: 1px solid #d1d5db !important;
   border-radius: 10px;
-  width: calc(100% - 22px) !important; /* Adjusted width */
+  width: 100% !important;
   height: 2.5rem !important; /* Increase the height of the input field */
   margin-bottom: 10px !important;
   padding-left: 10px !important; /* Add padding to the left of the input field */
 }
-
-
 
 .form-container button {
   padding: 0.5rem 1rem !important;

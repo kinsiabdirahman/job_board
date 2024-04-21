@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
-import "./Login.css";
 import loginImage from "../assets/login.jpeg";
+import "./Login.css";
+import "./LoginForm.css";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -37,12 +38,18 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="bckg">
-      <div className="register-container">
-        <div className="image-container">
+    <div className="custom-login-setup">
+      <div className="custom-login-container">
+        <div className="custom-image-container">
           <img src={loginImage} alt="login" className="login-image" />
         </div>
-        <div className="form-container">
+        <div className="custom-form-container">
+          <p className="hello-text">
+            <span role="img" aria-label="waving-hand">
+              👋
+            </span>{" "}
+            HELLO!
+          </p>
           <h1>Welcome Back!</h1>
           <h2>Please enter your details</h2>
           <form onSubmit={handleSubmit}>
@@ -55,6 +62,7 @@ const LoginForm = () => {
                 placeholder="Enter your username"
                 required
                 className="input"
+                style={{ width: "100%" }} // Apply width directly to input
               />
             </label>
             <label htmlFor="password" className="label">
@@ -66,6 +74,7 @@ const LoginForm = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 className="input"
+                style={{ width: "100%" }} // Apply width directly to input
               />
             </label>
             <button type="submit" className="button">
@@ -73,7 +82,7 @@ const LoginForm = () => {
             </button>
             <p>
               Don't have an account?{" "}
-              <NavLink to="/register" className="link">
+              <NavLink to="/register" className="custom-link">
                 <strong>Sign Up here</strong>
               </NavLink>
             </p>

@@ -1,51 +1,66 @@
-/* jobdescription.css */
+.application-form-page {
+  background: linear-gradient(
+    to bottom,
+    #0c5fa3,
+    #ffffff
+  ); /* Adjust gradient colors as needed */
+  padding: 20px; /* Add padding if needed */
+}
 
-/* Style for available jobs section */
-.job-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  /* Style for each job listing */
-  .job-listing {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style for job title */
-  .job-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style for job details */
-  .job-details {
-    margin-bottom: 15px;
-  }
-  
-  /* Style for minimum qualifications */
-  .min-qualifications {
-    font-weight: bold;
-  }
-  
-  /* Style for responsibilities */
-  .responsibilities {
-    font-weight: bold;
-  }
-  
-  /* Style for apply button */
-  .apply-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .apply-button:hover {
-    background-color: #0056b3;
-  }
+.application-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.application-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select {
+  appearance: none;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #3824d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}

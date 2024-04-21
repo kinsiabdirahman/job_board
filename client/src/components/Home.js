@@ -3,8 +3,8 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import "./Home.css";
 import { Link, useHistory } from "react-router-dom";
-import image1 from "./images/image1.png";
-
+import bckg from "./images/bckg.jpg";
+import { FaSearch } from "react-icons/fa";
 
 function Home() {
   const [jobs, setJobs] = useState([]);
@@ -63,9 +63,9 @@ function Home() {
       <NavBar />
       <header className="App-header">
         <div className="hero-container">
-          <img src={image1} alt="Hero Image" className="hero-image" />
+          <img src={bckg} alt="Hero Image" className="hero-image" />
           <div className="text-container">
-            <h1 className="hero-caption">Find your dream job</h1>
+            <h1 className="hero-caption">Discover Exciting Opportunities in <br/>the Tech World</h1>
             <p className="hero-paragraph">
               Looking for jobs? Start exploring instantly today!
             </p>
@@ -91,6 +91,7 @@ function Home() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
+            <FaSearch className="search-icon" />
           </div>
         </div>
       </header>
@@ -111,7 +112,7 @@ function Home() {
           {filteredJobs.length === 0 && <p>No jobs found.</p>}
         </div>
       </div>
-<Footer />
+      <Footer />
     </div>
   );
 }

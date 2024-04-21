@@ -44,7 +44,16 @@ const SignupForm = () => {
             <img src={loginImage} alt="Login" className="login-image" />
           </div>
           <div className="form-container">
-            <h1>Getting Started</h1>
+            <h1>
+              <span
+                role="img"
+                aria-label="fountain-pen"
+                style={{ color: "white" }}
+              >
+                🖋️
+              </span>{" "}
+              Getting Started
+            </h1>
             <h2>Kindly input your details to continue</h2>
             <form onSubmit={handleSubmit}>
               <div>
@@ -83,7 +92,10 @@ const SignupForm = () => {
               <button type="submit">Sign Up</button>
             </form>
             <p>
-              Already have an account? <NavLink to="/login">Login</NavLink>
+              Already have an account?{" "}
+              <NavLink to="/login" style={{ color: "white" }}>
+                Login
+              </NavLink>
             </p>
           </div>
         </div>
