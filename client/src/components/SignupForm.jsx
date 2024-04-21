@@ -88,7 +88,6 @@ const SignupForm = () => {
           <p>
           Already have an account? <Link to="/login" className='link'><strong>Log in here</strong></Link>
         </p>
-        {message && <p className="error-message">{message}</p>}
         </form>
       </div>
     </div>

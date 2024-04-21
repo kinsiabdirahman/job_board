@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './signup.css'; // Include the CSS file
 import signupImage from '../assets/signup.jpeg';
 
-const SignupForm = () => {
+const Signup = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -89,11 +89,10 @@ const SignupForm = () => {
           <p>
           Already have an account? <Link to="/login" className='link'><strong>Log in here</strong></Link>
         </p>
-        {message && <p className="error-message">{message}</p>}
         </form>
       </div>
     </div>
   );
 };
 
-export default SignupForm;
+export default Signup;
