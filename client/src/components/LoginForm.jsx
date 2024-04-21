@@ -31,7 +31,7 @@ const LoginForm = () => {
         const data = await response.json();
         localStorage.setItem("access_token", data.access_token);
         window.alert("Login successful");
-        history.push("./Home"); // Redirect to home.jsx upon successful login
+        history.push("/Home"); // Redirect to Home.jsx upon successful login
       } else {
         window.alert("Login failed. Invalid credentials");
       }
@@ -42,9 +42,8 @@ const LoginForm = () => {
   };
 
   return (
-    <>
-      <div className="setup">
-        <div className="login-container">
+    <div className="bckg">
+      <div className="register-container">
         <div className="image-container">
           <img src={loginImage} alt="login" className="login-image" />
         </div>
