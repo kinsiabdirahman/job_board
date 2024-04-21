@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./ApplicationForm.css";
-
 
 const ApplicationForm = ({ jobId }) => {
   const [firstName, setFirstName] = useState("");
@@ -8,6 +8,7 @@ const ApplicationForm = ({ jobId }) => {
   const [education, setEducation] = useState("");
   const [experience, setExperience] = useState("");
   const [aboutYourself, setAboutYourself] = useState("");
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,6 +32,8 @@ const ApplicationForm = ({ jobId }) => {
       .then((data) => {
         console.log(data);
         alert("Application saved successfully!");
+        // Redirect to the home page
+        history.push("/home");
       })
       .catch((error) => console.error("Error submitting application:", error));
     // Clear form fields
@@ -42,11 +45,11 @@ const ApplicationForm = ({ jobId }) => {
   };
 
   return (
-    <div>
+    <div className="application-form-page">
+    <div className="application-form-container">
       <h2>Application Form</h2>
-      <form onSubmit={handleSubmit}>
-        <fieldset>
-          <legend>Personal Information</legend>
+      <form className="application-form" onSubmit={handleSubmit}>
+        <div className="form-group">
           <label htmlFor="firstName">First Name:</label>
           <input
             type="text"
@@ -54,6 +57,8 @@ const ApplicationForm = ({ jobId }) => {
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
+        </div>
+        <div className="form-group">
           <label htmlFor="lastName">Last Name:</label>
           <input
             type="text"
@@ -61,27 +66,25 @@ const ApplicationForm = ({ jobId }) => {
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
-        </fieldset>
-        <fieldset>
-          <legend>Education</legend>
+        </div>
+        <div className="form-group">
+          <label htmlFor="education">Education:</label>
           <select
-            class="form-control dropdown"
             id="education"
             name="education"
             value={education}
             onChange={(e) => setEducation(e.target.value)}
           >
-            <option value="" selected="selected" disabled="disabled">
-              -- select one --
+            <option value="" disabled>
+              -- Select One --
             </option>
             <option value="High School">High School</option>
             <option value="Bachelor's degree">Bachelor's degree</option>
             <option value="Master's degree">Master's degree</option>
             <option value="Doctorate degree">Doctorate degree</option>
           </select>
-        </fieldset>
-        <fieldset>
-          <legend>Experience</legend>
+        </div>
+        <div className="form-group">
           <label htmlFor="experience">Years of Experience:</label>
           <input
             type="number"
@@ -89,17 +92,18 @@ const ApplicationForm = ({ jobId }) => {
             value={experience}
             onChange={(e) => setExperience(e.target.value)}
           />
-        </fieldset>
-        <fieldset>
-          <legend>About Yourself</legend>
+        </div>
+        <div className="form-group">
+          <label htmlFor="aboutYourself">About Yourself:</label>
           <textarea
             id="aboutYourself"
             value={aboutYourself}
             onChange={(e) => setAboutYourself(e.target.value)}
           />
-        </fieldset>
+        </div>
         <button type="submit">Submit</button>
       </form>
+    </div>
     </div>
   );
 };

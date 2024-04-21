@@ -28,6 +28,7 @@ class Application(db.Model, SerializerMixin):
     years_of_experience = db.Column(db.Integer)
     academic_history = db.Column(db.String)
     work_experience = db.Column(db.String)
+    cv_file = db.Column(db.LargeBinary) 
 
     def __repr__(self):
         return f'<Application {self.id}, {self.first_name}, {self.last_name}>'

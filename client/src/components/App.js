@@ -15,6 +15,10 @@ import Careers from "./Pages/Careers";
 
 import JobDescription from "./JobDescription";
 import ApplicationForm from "./ApplicationForm";
+import NavBar from "./NavBar";
+import Pages from "./Pages/Pages";
+import './App.css'
+import Footer from './Footer';
 
 function App() {
   const [registered, setRegistered] = React.useState(false);
@@ -22,6 +26,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+      
         <Switch>
           <Route exact path="/">
             {registered ? (
