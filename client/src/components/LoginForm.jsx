@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import "./LoginForm.css";
 import loginImage from "../assets/login.jpeg";
-import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { useAuth } from './AuthContext'; 
+
 import './Login.css'
-import loginImage from '../assets/login.jpeg';
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -132,6 +129,7 @@ const LoginForm = () => {
           {message && <p className="error-message">{message}</p>}
         </div>
       </div>
+    </div>
     </>
   );
 };

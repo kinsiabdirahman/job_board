@@ -86,11 +86,7 @@ body {
     }
   }
   
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+
 
 .bckg {
   padding-left: 70px;
