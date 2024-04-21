@@ -35,7 +35,7 @@ const AboutUs = () => {
           title="Maps"
           src="https://api.maptiler.com/maps/fe7da9bc-0ca3-4ea0-8090-a93c5d514a09/?key=spPhAOyghywnutBw51qW#12.0/-1.3024715/36.7103707"
           width="100%"
-          height="700px"
+          height="500px"
         ></iframe>
         <div className="marker"></div>
       </div>

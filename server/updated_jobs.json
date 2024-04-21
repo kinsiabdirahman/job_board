@@ -1,0 +1,28 @@
+[
+    {
+        "job_title": "Software Engineer",
+        "job_description": "Responsible for designing, developing, and testing software applications.",
+        "job_responsibilities": "Write clean, efficient code based on specifications. Collaborate with other engineers to integrate software components.. Troubleshoot and debug issues.",
+        "job_salary": 90000,
+        "location": "Nairobi",
+        "minimum_qualifications": [
+            "Bachelor's degree in Computer Science or related field.",
+            "Experience with programming languages such as Python, Java, or C++.",
+            "Strong problem-solving skills.",
+            "Ability to work independently and in teams."
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_description": "Responsible for analyzing complex datasets to discover insights and trends.",
+        "job_responsibilities": "Analyze and interpret complex data sets. Develop statistical models and algorithms.. Present findings to stakeholders.",
+        "job_salary": 95000,
+        "location": "Nairobi",
+        "minimum_qualifications": [
+            "Master's degree in Data Science, Statistics, or related field.",
+            "Proficiency in statistical analysis tools such as R or Python.",
+            "Experience with data visualization techniques.",
+            "Excellent communication and presentation skills."
+        ]
+    }
+]

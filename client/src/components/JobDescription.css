@@ -1,51 +1,74 @@
-/* jobdescription.css */
+/* JobDescription.css */
 
-/* Style for available jobs section */
+/* Container styling */
+.job-details-container {
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
 .job-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  /* Style for each job listing */
-  .job-listing {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style for job title */
-  .job-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style for job details */
-  .job-details {
-    margin-bottom: 15px;
-  }
-  
-  /* Style for minimum qualifications */
-  .min-qualifications {
-    font-weight: bold;
-  }
-  
-  /* Style for responsibilities */
-  .responsibilities {
-    font-weight: bold;
-  }
-  
-  /* Style for apply button */
-  .apply-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .apply-button:hover {
-    background-color: #0056b3;
-  }
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333 !important;
+}
+
+/* Button styling */
+.apply-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3824d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #0056b3;
+}
+
+/* Job details styling */
+.job-details {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #555 !important;
+}
+
+/* Icon styling */
+.icon {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Job description and responsibilities styling */
+.job-details-text {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Strong text styling */
+.job-details-text strong {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Minimum qualifications and responsibilities styling */
+.job-details-text p {
+  margin-bottom: 10px;
+  color: black !important;
+}
+
+/* Apply button wrapper */
+.apply-button-wrapper {
+  margin-top: 30px;
+}
+
+/* Separator line styling */
+.separator-line {
+  border-top: 1px solid #ddd;
+  margin-bottom: 20px;
+}

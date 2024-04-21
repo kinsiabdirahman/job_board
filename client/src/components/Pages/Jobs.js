@@ -12,11 +12,11 @@ const Jobs = () => {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      // Example dummy data (replace this with actual API fetch logic)
+
       const dummyJobs = [
-        { id: 1, title: "Software Engineer", company: "Tech Co.", location: "Remote" },
-        { id: 2, title: "Marketing Specialist", company: "Digital Marketing Inc.", location: "New York" },
-        { id: 3, title: "Data Analyst", company: "Data Analytics Solutions", location: "San Francisco" },
+        { id: 1, title: "Software Engineer", company: "Tech Co.", location: "Nairobi" },
+        { id: 2, title: "Cloud Engineer", company: "Pioneer Inc", location: "Nairobi" },
+        { id: 3, title: "Data Analyst", company: "Data Analytics Solutions", location: "Nairobi" },
         // Add more jobs here if needed
       ];
 

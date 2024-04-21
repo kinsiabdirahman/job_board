@@ -93,6 +93,23 @@ if __name__ == '__main__':
             location='Nairobi'
         ))
 
+        jobs.append(Job(
+            job_title='UX/UI Designer',
+            job_description='Responsible for creating intuitive and visually appealing user interfaces for web and mobile applications.',
+            job_responsibilities='Gather and evaluate user requirements. Design graphic elements and build navigation components. Conduct usability testing and iterate designs based on feedback.',
+            job_salary=85000,
+            location='Nairobi'
+    ))
+
+        jobs.append(Job(
+            job_title='Product Manager',
+            job_description='Responsible for overseeing the development and launch of new products or features.',
+            job_responsibilities='Define product vision and strategy. Develop product roadmaps and prioritize feature development. Coordinate cross-functional teams to deliver products on time and within budget.',
+            job_salary=95000,
+            location='Nairobi'
+    ))
+
+
         # Add each job instance to the database session
         for job in jobs:
             db.session.add(job)

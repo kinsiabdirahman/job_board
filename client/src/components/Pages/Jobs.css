@@ -11,8 +11,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+
   }
   
+  .job-card p{
+    color:rgb(61, 59, 59) !important;
+  }
   .job-card {
     background-color: #f9f9f9;
     padding: 20px;
