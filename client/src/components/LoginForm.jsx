@@ -26,7 +26,7 @@ const LoginForm = () => {
         const data = await response.json();
         localStorage.setItem("access_token", data.access_token);
         window.alert("Login successful");
-        history.push("./Home"); // Redirect to home.jsx upon successful login
+        history.push("/Home"); // Redirect to Home.jsx upon successful login
       } else {
         window.alert("Login failed. Invalid credentials");
       }
@@ -37,50 +37,50 @@ const LoginForm = () => {
   };
 
   return (
-    <>
-      <div className="setup">
-        <div className="login-container">
+    <div className="bckg">
+      <div className="register-container">
         <div className="image-container">
           <img src={loginImage} alt="login" className="login-image" />
         </div>
-          <div className="form-container">
-            <form className="register-form form-container" onSubmit={(e) => handleSubmit(e)}>
-            <h2>Welcome Back!</h2>
-          <h4>please enter your details</h4>
-              <label htmlFor="username" className="label">
-                Username
-                <input
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                  className="input" // Apply input styling
-                />
-              </label>
-              <label htmlFor="password" className="label">
-                Password
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                  className="input" // Apply input styling
-                />
-              </label>
-              <button type="submit" className="button">
-                Log in
-              </button>
-              <p>
+        <div className="form-container">
+          <h1>Welcome Back!</h1>
+          <h2>Please enter your details</h2>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="username" className="label">
+              Username
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="Enter your username"
+                required
+                className="input"
+              />
+            </label>
+            <label htmlFor="password" className="label">
+              Password
+              <input
+                type="password"
+                placeholder="Enter your password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                className="input"
+              />
+            </label>
+            <button type="submit" className="button">
+              Log in
+            </button>
+            <p>
               Don't have an account?{" "}
               <NavLink to="/register" className="link">
                 <strong>Sign Up here</strong>
               </NavLink>
             </p>
-            </form>  
-          </div>
+          </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
