@@ -1,0 +1,10 @@
+services:
+  - name: backend
+    buildCommand: pipenv install --deploy --ignore-pipfile
+    startCommand: pipenv run python server/app.py
+    env:
+      - key: JWT_SECRET_KEY
+        fromDatabase: true
+    envVarsFrom:
+      - databaseName: my-database-name
+        environmentVariable: DATABASE_URL
